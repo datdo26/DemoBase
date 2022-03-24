@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Contact from '../screens/contact/Contact';
-import Recent from '../screens/recent/Recent';
-import AddContact from '../screens/addContact/addContact';
+import Contact from '../screens/Contact/Contact';
+import Recent from '../screens/Recent/Recent';
+import AddContact from '../screens/AddContact/AddContact';
 export type MainTabParamLists = {
   Contact: undefined;
   Recent: undefined;

@@ -4,9 +4,7 @@ import styled from 'styled-components/native';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../nav/RootStack';
 
-const WrapView = styled.SafeAreaView`
-  background-color: #fff;
-`;
+const WrapView = styled.SafeAreaView``;
 
 const Title = styled.Text`
   font-weight: 700;
@@ -30,7 +28,6 @@ const Text1 = styled.Text`
 `;
 
 const Text2 = styled.Text`
-  font-style: italic;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
@@ -39,23 +36,42 @@ const Text2 = styled.Text`
   color: #828282;
   margin-top: 76;
 `;
-const LoginButton = styled.TouchableOpacity`
-  margin-vertical: 40px;
-  width: 120px;
-  height: 40px;
-  padding: 12px;
-  border-radius: 10px;
-  background-color: 'red';
+const LoginBase = styled.TouchableOpacity`
+  height: 48px;
+  background: #f2a54a;
+  border-radius: 4px;
+  margin-top: 24;
+  margin-horizontal: 38px;
+  padding: 14px;
 `;
 
-const LoginText = styled.Text`
+const LoginText1 = styled.Text`
   font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+`;
+
+const LoginText2 = styled.Text`
+  font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   text-align: center;
   letter-spacing: -0.24px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #f2a54a;
+`;
+
+const LoginButton = styled.TouchableOpacity`
+  border: 1px solid #f2a54a;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-horizontal: 38px;
+  padding: 14px;
+  margin-top: 12;
 `;
 
 const Login = () => {
@@ -74,14 +90,13 @@ const Login = () => {
         style={styles.vector}
       />
       <Text2>Bạn chưa đăng nhập</Text2>
-      <TouchableOpacity
-        style={styles.LoginButton1}
-        onPress={() => navigate('MainTab')}>
-        <Text style={styles.LoginText1}>ĐĂNG NHẬP BẰNG BASE ACCOUNT</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.LoginButton2}>
-        <Text style={styles.LoginText2}>ĐĂNG NHẬP THỦ CÔNG</Text>
-      </TouchableOpacity>
+
+      <LoginBase onPress={() => navigate('SideDrawer')}>
+        <LoginText1>ĐĂNG NHẬP BẰNG BASE ACCOUNT</LoginText1>
+      </LoginBase>
+      <LoginButton>
+        <LoginText2>ĐĂNG NHẬP THỦ CÔNG</LoginText2>
+      </LoginButton>
     </WrapView>
   );
 };
@@ -95,41 +110,5 @@ const styles = StyleSheet.create({
   vector: {
     alignSelf: 'center',
     marginTop: 78,
-  },
-  LoginButton1: {
-    width: 300,
-    height: 48,
-    backgroundColor: '#F2A54A',
-    marginTop: 24,
-    borderRadius: 4,
-    alignSelf: 'center',
-  },
-  LoginText1: {
-    color: '#FFFFFF',
-    fontWeight: '500',
-    fontSize: 15,
-    lineHeight: 20,
-    letterSpacing: -0.24,
-    textAlign: 'center',
-    marginVertical: 14,
-  },
-  LoginButton2: {
-    width: 300,
-    height: 48,
-    backgroundColor: '#fff',
-    borderColor: '#F2A54A',
-    borderWidth: 1,
-    marginTop: 12,
-    borderRadius: 4,
-    alignSelf: 'center',
-  },
-  LoginText2: {
-    fontWeight: '500',
-    fontSize: 15,
-    lineHeight: 20,
-    letterSpacing: -0.24,
-    textAlign: 'center',
-    marginVertical: 14,
-    color: '#F2A54A',
   },
 });

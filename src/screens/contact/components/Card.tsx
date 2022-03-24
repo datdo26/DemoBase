@@ -45,7 +45,7 @@ const Card = () => {
 
   const renderCard = ({item}) => {
     return (
-      <TouchableOpacity onPress={() => navigate('OneContact')}>
+      <TouchableOpacity onPress={() => navigate('SingleContact')}>
         <View
           style={{
             backgroundColor: 'white',
@@ -53,7 +53,8 @@ const Card = () => {
             height: 70,
             alignItems: 'center',
             flexDirection: 'row',
-            borderBottomWidth: 1,
+            borderBottomWidth: 0.5,
+            borderBottomColor: '#0000001A',
           }}>
           <Image
             source={{uri: `${item.img}`}}

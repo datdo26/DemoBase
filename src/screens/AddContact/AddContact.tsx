@@ -8,7 +8,7 @@ import {
   TextInput,
 } from 'react-native';
 import React from 'react';
-import Header from './header';
+import Header from './Header';
 
 const AddContact = () => {
   return (
