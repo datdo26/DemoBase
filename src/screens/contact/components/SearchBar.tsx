@@ -27,6 +27,7 @@ const SearchBar = ({onSearchEnter}) => {
       <View
         style={{
           flexDirection: 'row',
+          justifyContent: 'space-between',
         }}>
         <Image
           source={require('../../../assets/ic_search.png')}

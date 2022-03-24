@@ -3,9 +3,11 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Contact from '../screens/contact/Contact';
 import Recent from '../screens/recent/Recent';
+import AddContact from '../screens/addContact/addContact';
 export type MainTabParamLists = {
   Contact: undefined;
   Recent: undefined;
+  AddContact: undefined;
 };
 
 const Tab = createBottomTabNavigator();
@@ -27,6 +29,17 @@ const MainTab = () => {
           headerShown: false,
           tabBarIcon: ({color}) => (
             <Image source={require('../assets/contact/ic_contact.png')} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name=" "
+        component={AddContact}
+        options={{
+          headerShown: false,
+
+          tabBarIcon: ({color}) => (
+            <Image source={require('../assets/ic_add_white.png')} />
           ),
         }}
       />

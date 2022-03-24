@@ -1,6 +1,6 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Header from './header';
+import Header from './Header';
 
 const Recent = () => {
   return (
