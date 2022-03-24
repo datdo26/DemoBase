@@ -13,7 +13,6 @@ import Header from './Header';
 const SingleContact = () => {
   return (
     <SafeAreaView>
-      <Header />
       <View>
         <TouchableOpacity style={{alignItems: 'center', marginTop: 48}}>
           <Image source={require('../../assets/avatar.png')} />

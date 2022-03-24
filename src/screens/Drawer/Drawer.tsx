@@ -4,14 +4,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Contact from '../Contact/Contact';
 import Recent from '../Recent/Recent';
+import MainTab from '../../nav/MainTab';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Drawer = createDrawerNavigator();
+
+const Stack = createBottomTabNavigator();
 
 const SideDrawer = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="Liên Hệ" component={Contact} />
-      <Drawer.Screen name="Gần Đây" component={Recent} />
+      <Stack.Screen name="Home" component={MainTab} />
     </Drawer.Navigator>
   );
 };

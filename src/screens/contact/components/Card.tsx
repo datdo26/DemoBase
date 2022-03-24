@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, {useCallback} from 'react';
-import {IDoctor} from '../../../data/informations';
 import {FlatList} from 'react-native-gesture-handler';
 import axios from 'axios';
 import {SearchBar} from 'react-native-screens';
