@@ -7,7 +7,8 @@ import styled from 'styled-components/native';
 const TouchableOpacity = styled.TouchableOpacity``;
 
 const Wrapper = styled.View`
-margin-top: 16px`;
+  margin-top: 16px;
+`;
 
 const WrapCard = styled.View`
   background-color: white;

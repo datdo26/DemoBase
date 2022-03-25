@@ -12,9 +12,9 @@ const WrapView = styled.View`
 
 const ButtonBack = styled.TouchableOpacity``;
 
-const ButtonDone = styled.TouchableOpacity``
+const ButtonDone = styled.TouchableOpacity``;
 const Back = styled.Image`
- margin-left :16px;
+  margin-left: 16px;
 `;
 
 const TextButton = styled.Text`
@@ -23,27 +23,24 @@ const TextButton = styled.Text`
   line-height: 22px;
   text-align: center;
   letter-spacing: -0.41px;
-  color: #F2A54A;
+  color: #f2a54a;
   margin-right: 16px;
-
-`
+`;
 
 const Header = () => {
-    const {goBack} = useNavigation();
-    return (
-        <Wrapper>
-            <WrapView>
-                <ButtonBack onPress={() => goBack()}>
-                    <Back source={require('../../assets/ic_back.png')}/>
-                </ButtonBack>
-                <ButtonDone>
-                    <TextButton>
-                        Xong
-                    </TextButton>
-                </ButtonDone>
-            </WrapView>
-        </Wrapper>
-    );
+  const {goBack} = useNavigation();
+  return (
+    <Wrapper>
+      <WrapView>
+        <ButtonBack onPress={() => goBack()}>
+          <Back source={require('../../assets/ic_back.png')} />
+        </ButtonBack>
+        <ButtonDone>
+          <TextButton>Xong</TextButton>
+        </ButtonDone>
+      </WrapView>
+    </Wrapper>
+  );
 };
 
 export default Header;

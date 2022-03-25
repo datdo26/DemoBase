@@ -4,9 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import MainTab from './MainTab';
 import SingleContact from '../screens/SingleContact/SingleContact';
-import SideDrawer, {All, General} from '../screens/Drawer/Drawer';
+import SideDrawer from '../screens/Drawer/Drawer';
 import {LoginScreen} from '../screens/LoginScreen';
-import {AddContactScreen} from '../screens/AddContact/AddContactScreen';
 
 export type RootStackParamList = {
   MainTab: undefined;

@@ -4,12 +4,12 @@ import SearchBar from './components/SearchBar';
 import Card from './components/Card';
 
 const ContactScreen = () => {
-    return (
-        <SafeAreaView>
-            <SearchBar />
-            <Card />
-        </SafeAreaView>
-    );
+  return (
+    <SafeAreaView>
+      <SearchBar />
+      <Card />
+    </SafeAreaView>
+  );
 };
 
 export default ContactScreen;
