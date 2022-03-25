@@ -1,59 +1,55 @@
 import {
-  Dimensions,
-  Image,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
+    Dimensions,
+    StyleSheet,
 } from 'react-native';
 import React from 'react';
+import styled from "styled-components/native";
 
 const width = Dimensions.get('window').width;
 
-const SearchBar = ({onSearchEnter}) => {
-  const [term, setTerm] = React.useState('');
-  return (
-    <SafeAreaView
-      style={{
-        width: width - 20,
-        height: 46,
-        backgroundColor: '#C4C4C4',
-        justifyContent: 'center',
-        borderRadius: 4,
-        marginHorizontal: 10,
-      }}>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-        }}>
-        <Image
-          source={require('../../../assets/ic_search.png')}
-          style={{width: 24, height: 24}}
-        />
-        <TextInput
-          placeholder="Tìm kiếm danh bạ"
-          style={{marginLeft: 16}}
-          value={term}
-          onChangeText={newText => {
-            setTerm(newText);
-          }}
-          onEndEditing={() => {
-            onSearchEnter(term);
-          }}
-        />
-        <TouchableOpacity
-          onPress={() => {
-            setTerm('');
-            onSearchEnter('');
-          }}>
-          <Image source={require('../../../assets/close.png')} />
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
-  );
+const Container = styled.View`
+  width: ${(width - 20)}px;
+  background-color: #E0E0E0;
+  align-content: center;
+  border-radius: 4px;
+  margin: 0 10px `;
+
+const WrapCard = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  height:36px;
+`;
+
+const IconSearch = styled.Image`
+  width: 24px;
+  height: 24px;
+`;
+
+const SearchInput = styled.TextInput`
+`;
+
+const ButtonCancel = styled.TouchableOpacity``
+
+const IconCancel = styled.Image``
+
+
+
+
+
+const SearchBar = () => {
+    return (
+        <Container>
+            <WrapCard>
+                <IconSearch
+                    source={require('../../../assets/ic_search.png')}
+                />
+                <SearchInput placeholder="Tìm kiếm danh bạ"/>
+                <ButtonCancel>
+                    <IconCancel source={require('../../../assets/close.png')}/>
+                </ButtonCancel>
+            </WrapCard>
+        </Container>
+    );
 };
 
 export default SearchBar;

@@ -1,13 +1,16 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Contact from '../screens/Contact/Contact';
-import Recent from '../screens/Recent/Recent';
-import AddContact from '../screens/AddContact/AddContact';
+import Recent from '../screens/Recent/RecentScreen';
+import AddContactScreen from '../screens/AddContact/AddContactScreen';
+import ContactScreen from "../screens/Contact/ContactScreen";
+import RecentScreen from "../screens/Recent/RecentScreen";
+
+
 export type MainTabParamLists = {
-  Contact: undefined;
-  Recent: undefined;
-  AddContact: undefined;
+  ContactScreen: undefined;
+  RecentScreen: undefined;
+  AddContactScreen: undefined;
 };
 
 const Tab = createBottomTabNavigator();
@@ -24,7 +27,7 @@ const MainTab = () => {
       }}>
       <Tab.Screen
         name="Liên hệ"
-        component={Contact}
+        component={ContactScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (
@@ -34,18 +37,17 @@ const MainTab = () => {
       />
       <Tab.Screen
         name=" "
-        component={AddContact}
+        component={AddContactScreen}
         options={{
           headerShown: false,
-
-          tabBarIcon: ({color}) => (
+            tabBarIcon: ({color}) => (
             <Image source={require('../assets/ic_add_white.png')} />
           ),
         }}
       />
       <Tab.Screen
         name="Gần đây"
-        component={Recent}
+        component={RecentScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (

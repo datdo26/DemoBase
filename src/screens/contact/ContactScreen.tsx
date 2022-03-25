@@ -3,15 +3,15 @@ import React from 'react';
 import SearchBar from './components/SearchBar';
 import Card from './components/Card';
 
-const Contact = () => {
-  return (
-    <SafeAreaView>
-      <SearchBar onSearchEnter={undefined} />
-      <Card />
-    </SafeAreaView>
-  );
+const ContactScreen = () => {
+    return (
+        <SafeAreaView>
+            <SearchBar />
+            <Card />
+        </SafeAreaView>
+    );
 };
 
-export default Contact;
+export default ContactScreen;
 
 const styles = StyleSheet.create({});

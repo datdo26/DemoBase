@@ -1,7 +1,7 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const Recent = () => {
+const RecentScreen = () => {
   return (
     <SafeAreaView>
       <Text>Recent</Text>
@@ -9,6 +9,6 @@ const Recent = () => {
   );
 };
 
-export default Recent;
+export default RecentScreen;
 
 const styles = StyleSheet.create({});
